@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#logo" id="logo">Portfolio</a>
+                <ul id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#skills">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hello, Im <span>Maricel</span> Carciller</h1>
+                <p>And I am a web Developer</p>
+            </div>
+        </div>
+    </div>
+<!-- ---------------about------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+            <img src="picture 2.jpg">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>I'm Maricel Carciller and I am 21 years old
+                and leave from Otavi Bulan Sorsogon,
+                I study at Sorsogon State University Bulan Campus
+                with the course of Batchelor of Science in Information
+                Technology.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <Li><span>2008-2014</span><br>Otavi Elementary school (Otavi Bulan Sorsogon)</Li>
+                        <Li><span>2014-2018</span><br> Foustino G. Glua High School ( Otavi Bulan Sorsogon )</Li>
+                        <Li><span>2018-2020</span><br> Bulan National High School ( Zone 8 Bulan Sorsogon )</Li>
+                        <Li><span>Present</span><br> Sorsogon State University Bulan Campus ( Zone 8 Bulan Sorsogon )</Li>
+
+                    </ul>
+                </div>
+                <button><a href="https://drive.google.com/drive/u/0/folders/11sjiyOlk39BrDb4-He-vajGCFT02hPHl" class="btn"> download CV</a></button>
+            </div>
+            </div>
+        </div>
+   </div>
+</div>
+<!-- ----------------resume------------ -->
+<div id="resume">
+    <div class="container">
+        <h1 class="sub-title">My Resume</h1>
+        <div class="resume-list">
+            <div>
+               <p><i class="fa-solid fa-calendar-days"></i>2008-2014 <span>- Otavi Elementary school (Otavi Bulan Sorsogon)</span></p>
+               <p><i class="fa-solid fa-calendar-days"></i>2014-2018 <span>- Junior High at Foustino G. Glua High School (Otavi Bulan Sorsogon)</span></p>
+               <p><i class="fa-solid fa-calendar-days"></i>2018-2020 <span>- Senior High at Bulan National High School (Zone 8 Bulan Sorsogon)</span></p>
+               <p><i class="fa-solid fa-calendar-days"></i>PRESENT <span>- Sorsogon State University-Bulan Campus (Zone 8 Bulan Sorsogon)</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -----------------portfolio--------------- -->
+<div id="Skills">
+    <div class="container">
+        <h1 class="sub-title">My Portfolio</h1>
+            <div class="worklist">
+                <div class="work">
+                 <h3><i class="fa-solid fa-code-compare"></i> Note-app </h3>
+                 <button><a href="https://github.com/gotismaricel/Carciller-Noteapp.git" class="note">View</a></button>
+                 <h3><i class="fa-solid fa-code-compare"></i> chat-App </h3>
+                 <button><a href="https://github.com/gotismaricel/chat-App.git" class="chat">View</a></button>
+                 <h3><i class="fa-solid fa-code-compare"></i> weather-App </h3>
+                 <button><a href="https://github.com/gotismaricel/weather-App.git" class="weather">View</a></button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- -------------contact-------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                      <p><i class="fa-solid fa-location-dot"></i>Otavi Bulan Sorsogon</p>
+                      <p><i class="fa-solid fa-envelope"></i>maricelgotiscarciller29@gmail.com</p>
+                      <p><i class="fa-brands fa-facebook"></i>Maricel Gotis Carciller</p>
+                      <p><i class="fa-solid fa-address-book"></i>09306117051</p>
+                    </div>
+                </div>
+            <div class="contact-right">
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright @ Maricel. Made with <i class="fa-solid fa-heart"></i> My Portfolio</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+
+    function opentab(tabname){
+        for(tablinks of tablinks){
+            tablinks.classList.remove("active-link");
+        }
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0"
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+    }
+
+</script>
+</body>
+</html>
